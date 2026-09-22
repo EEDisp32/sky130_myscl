@@ -1,0 +1,3 @@
+no_synth_custom.cells: This configuration file explicitly excludes a subset of standard foundry cells from the technology mapping phase. By preventing Yosys and ABC from mapping logic to these specific foundry equivalents during synthesis, the flow is forced to build the netlist using exclusively the custom MySCL cells, while downstream Place & Route stages integrate the custom layout properly.
+
+Integration Note: Rather than passing separate LEF and GDS paths via OpenLane configuration variables, these custom cells were integrated directly into the local SKY130 library directory structure during testing, allowing them to be picked up natively by the flow. (.../.ciel/ciel/sky130/versions/{version}/sky130A/libs.ref/sky130_fd_sc_hd)
