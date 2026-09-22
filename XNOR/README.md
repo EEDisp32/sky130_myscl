@@ -8,7 +8,7 @@ Basic 2-input XNOR standard cell designed from scratch using the Sky130 PDK, ful
 
 | Parameter | Value |
 |---|---|
-| **Function** | Y = !${(A \oplus B)}$ |
+| **Function** | Y = !(A ⨁ B) |
 | **Topology** | Complementary CMOS Architecture |
 | **Standard Height** | 2.72 µm |
 | **Cell Width** | 3.68 µm (8 tracks) |

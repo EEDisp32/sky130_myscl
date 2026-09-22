@@ -1,4 +1,4 @@
-# CMOS Inverter (sky130_myscl_inv)
+# CMOS Inverter (`sky130_myscl_inv`)
 
 Basic static CMOS inverter cell designed from scratch using the Sky130 PDK, fully compatible with the standard cell library grid and OpenLane flow.
 
