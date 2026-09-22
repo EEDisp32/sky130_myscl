@@ -1,0 +1,74 @@
+%Warning-PINCONNECTEMPTY: /openlane/designs/4bit/src/4bit_test.v:47:51: Cell pin connected by name with empty reference: 'QN'
+   47 |     D_FF_pe   f0 (.CLK(clk), .D(d[0]), .Q(q[0]), .QN());
+      |                                                   ^~
+                          ... For warning description see https://verilator.org/warn/PINCONNECTEMPTY?v=5.009
+                          ... Use "/* verilator lint_off PINCONNECTEMPTY */" and lint_on around source to disable this message.
+%Warning-PINCONNECTEMPTY: /openlane/designs/4bit/src/4bit_test.v:57:51: Cell pin connected by name with empty reference: 'QN'
+   57 |     D_FF_pe   f1 (.CLK(clk), .D(d[1]), .Q(q[1]), .QN());
+      |                                                   ^~
+%Warning-PINCONNECTEMPTY: /openlane/designs/4bit/src/4bit_test.v:67:51: Cell pin connected by name with empty reference: 'QN'
+   67 |     D_FF_pe   f2 (.CLK(clk), .D(d[2]), .Q(q[2]), .QN());
+      |                                                   ^~
+%Warning-PINCONNECTEMPTY: /openlane/designs/4bit/src/4bit_test.v:77:51: Cell pin connected by name with empty reference: 'QN'
+   77 |     D_FF_pe   f3 (.CLK(clk), .D(d[3]), .Q(q[3]), .QN());
+      |                                                   ^~
+%Warning-UNUSEDSIGNAL: /openlane/designs/4bit/src/Nand_gate.v:3:11: Signal is not used: 'A'
+                                                                  : ... In instance counter4s.n3
+    3 |     input A,
+      |           ^
+%Warning-UNUSEDSIGNAL: /openlane/designs/4bit/src/Nand_gate.v:4:11: Signal is not used: 'B'
+                                                                  : ... In instance counter4s.n3
+    4 |     input B,
+      |           ^
+%Warning-UNDRIVEN: /openlane/designs/4bit/src/Nand_gate.v:5:12: Signal is not driven: 'Y'
+                                                              : ... In instance counter4s.n3
+    5 |     output Y
+      |            ^
+%Warning-UNUSEDSIGNAL: /openlane/designs/4bit/src/inverter.v:3:11: Signal is not used: 'A'
+                                                                 : ... In instance counter4s.i3
+    3 |     input A,
+      |           ^
+%Warning-UNDRIVEN: /openlane/designs/4bit/src/inverter.v:4:12: Signal is not driven: 'Y'
+                                                             : ... In instance counter4s.i3
+    4 |     output Y
+      |            ^
+%Warning-UNUSEDSIGNAL: /openlane/designs/4bit/src/D_FF_pe.v:2:10: Signal is not used: 'CLK'
+                                                                : ... In instance counter4s.f3
+    2 |    input CLK,
+      |          ^~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/4bit/src/D_FF_pe.v:3:10: Signal is not used: 'D'
+                                                                : ... In instance counter4s.f3
+    3 |    input D,
+      |          ^
+%Warning-UNDRIVEN: /openlane/designs/4bit/src/D_FF_pe.v:4:11: Signal is not driven: 'Q'
+                                                            : ... In instance counter4s.f3
+    4 |    output Q,
+      |           ^
+%Warning-UNDRIVEN: /openlane/designs/4bit/src/D_FF_pe.v:5:11: Signal is not driven: 'QN'
+                                                            : ... In instance counter4s.f3
+    5 |    output QN
+      |           ^~
+%Warning-UNUSEDSIGNAL: /openlane/designs/4bit/src/Xnor.v:3:11: Signal is not used: 'A'
+                                                             : ... In instance counter4s.x3
+    3 |     input A,
+      |           ^
+%Warning-UNUSEDSIGNAL: /openlane/designs/4bit/src/Xnor.v:4:11: Signal is not used: 'B'
+                                                             : ... In instance counter4s.x3
+    4 |     input B,
+      |           ^
+%Warning-UNDRIVEN: /openlane/designs/4bit/src/Xnor.v:5:12: Signal is not driven: 'Y'
+                                                         : ... In instance counter4s.x3
+    5 |     output Y
+      |            ^
+%Warning-UNUSEDSIGNAL: /openlane/designs/4bit/src/Nor_gate.v:3:11: Signal is not used: 'A'
+                                                                 : ... In instance counter4s.r3
+    3 |     input A,
+      |           ^
+%Warning-UNUSEDSIGNAL: /openlane/designs/4bit/src/Nor_gate.v:4:11: Signal is not used: 'B'
+                                                                 : ... In instance counter4s.r3
+    4 |     input B,
+      |           ^
+%Warning-UNDRIVEN: /openlane/designs/4bit/src/Nor_gate.v:5:12: Signal is not driven: 'Y'
+                                                             : ... In instance counter4s.r3
+    5 |     output Y
+      |            ^

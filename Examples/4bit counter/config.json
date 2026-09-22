@@ -1,0 +1,19 @@
+{
+    "DESIGN_NAME": "counter4s",
+    "VERILOG_FILES": "dir::src/4bit_test.v",
+    "VERILOG_FILES_BLACKBOX": [
+        "dir::src/Nand_gate.v", "dir::src/inverter.v", "dir::src/D_FF_pe.v", "dir::src/Xnor.v", "dir::src/Nor_gate.v"
+    ],
+    "CLOCK_PORT": "clk",
+    "CLOCK_NET": "clk",
+    
+    "LIB_TYPICAL": "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/MySCL_M_tt.lib",
+    "LIB_SLOWEST": "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/MySCL_M_ss.lib",
+    "LIB_FASTEST": "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/MySCL_M_ff.lib",
+    
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 100 130",
+
+    "FP_PDN_ENABLE_GLOBAL_CONNECTIONS": "1",
+    "SYNTH_TIMING_DRIVEN": 0
+}

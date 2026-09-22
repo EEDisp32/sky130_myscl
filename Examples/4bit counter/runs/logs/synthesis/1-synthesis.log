@@ -1,0 +1,631 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.30+48 (git sha1 14d50a176d5, gcc 8.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /openlane/designs/4bit/src/Nand_gate.v
+Parsing SystemVerilog input from `/openlane/designs/4bit/src/Nand_gate.v' to AST representation.
+Generating RTLIL representation for module `\Nand_gate'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /openlane/designs/4bit/src/inverter.v
+Parsing SystemVerilog input from `/openlane/designs/4bit/src/inverter.v' to AST representation.
+Generating RTLIL representation for module `\inverter'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /openlane/designs/4bit/src/D_FF_pe.v
+Parsing SystemVerilog input from `/openlane/designs/4bit/src/D_FF_pe.v' to AST representation.
+Generating RTLIL representation for module `\D_FF_pe'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /openlane/designs/4bit/src/Xnor.v
+Parsing SystemVerilog input from `/openlane/designs/4bit/src/Xnor.v' to AST representation.
+Generating RTLIL representation for module `\Xnor'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /openlane/designs/4bit/src/Nor_gate.v
+Parsing SystemVerilog input from `/openlane/designs/4bit/src/Nor_gate.v' to AST representation.
+Generating RTLIL representation for module `\Nor_gate'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /openlane/designs/4bit/src/4bit_test.v
+Parsing SystemVerilog input from `/openlane/designs/4bit/src/4bit_test.v' to AST representation.
+Generating RTLIL representation for module `\counter4s'.
+Successfully finished Verilog frontend.
+
+7. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/tmp/synthesis/hierarchy.dot'.
+Dumping module counter4s to page 1.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \counter4s
+
+8.2. Analyzing design hierarchy..
+Top module:  \counter4s
+Removed 0 unused modules.
+
+9. Executing TRIBUF pass.
+
+10. Executing HIERARCHY pass (managing design hierarchy).
+
+10.1. Analyzing design hierarchy..
+Top module:  \counter4s
+
+10.2. Analyzing design hierarchy..
+Top module:  \counter4s
+Removed 0 unused modules.
+
+11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+12. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+13. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+14. Executing PROC_INIT pass (extract init attributes).
+
+15. Executing PROC_ARST pass (detect async resets in processes).
+
+16. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+17. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+18. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+19. Executing PROC_DFF pass (convert process syncs to FFs).
+
+20. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+21. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+22. Executing CHECK pass (checking for obvious problems).
+Checking module counter4s...
+Found and reported 0 problems.
+
+23. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+24. Executing FLATTEN pass (flatten design).
+
+25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+26. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+27. Executing OPT pass (performing simple optimizations).
+
+27.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+27.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+27.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter4s..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+27.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter4s.
+Performed a total of 0 changes.
+
+27.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+27.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+27.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+27.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+27.9. Finished OPT passes. (There is nothing left to do.)
+
+28. Executing FSM pass (extract and optimize FSM).
+
+28.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+28.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+28.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+28.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+28.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+28.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+28.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+28.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+29. Executing OPT pass (performing simple optimizations).
+
+29.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+29.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+29.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter4s..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+29.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter4s.
+Performed a total of 0 changes.
+
+29.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+29.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+29.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+29.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+29.9. Finished OPT passes. (There is nothing left to do.)
+
+30. Executing WREDUCE pass (reducing word size of cells).
+
+31. Executing PEEPOPT pass (run peephole optimizers).
+
+32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+33. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module counter4s:
+  created 0 $alu and 0 $macc cells.
+
+34. Executing SHARE pass (SAT-based resource sharing).
+
+35. Executing OPT pass (performing simple optimizations).
+
+35.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+35.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+35.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter4s..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter4s.
+Performed a total of 0 changes.
+
+35.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+35.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+35.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+35.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+35.9. Finished OPT passes. (There is nothing left to do.)
+
+36. Executing MEMORY pass.
+
+36.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+36.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+36.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+36.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+36.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+36.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+36.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+36.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+36.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+36.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+37. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+38. Executing OPT pass (performing simple optimizations).
+
+38.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+38.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+38.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+38.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+38.5. Finished fast OPT passes.
+
+39. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+40. Executing OPT pass (performing simple optimizations).
+
+40.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+40.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+40.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter4s..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+40.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter4s.
+Performed a total of 0 changes.
+
+40.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+40.6. Executing OPT_SHARE pass.
+
+40.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+40.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+40.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+40.10. Finished OPT passes. (There is nothing left to do.)
+
+41. Executing TECHMAP pass (map to technology primitives).
+
+41.1. Executing Verilog-2005 frontend: /build/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/build/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+41.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~73 debug messages>
+
+42. Executing OPT pass (performing simple optimizations).
+
+42.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+42.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+42.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+42.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+42.5. Finished fast OPT passes.
+
+43. Executing ABC pass (technology mapping using ABC).
+
+43.1. Extracting gate netlist of module `\counter4s' to `<abc-temp-dir>/input.blif'..
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+44. Executing OPT pass (performing simple optimizations).
+
+44.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+44.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+44.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+44.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+44.5. Finished fast OPT passes.
+
+45. Executing HIERARCHY pass (managing design hierarchy).
+
+45.1. Analyzing design hierarchy..
+Top module:  \counter4s
+
+45.2. Analyzing design hierarchy..
+Top module:  \counter4s
+Removed 0 unused modules.
+
+46. Printing statistics.
+
+=== counter4s ===
+
+   Number of wires:                  9
+   Number of wire bits:             25
+   Number of public wires:           9
+   Number of public wire bits:      25
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 18
+     D_FF_pe                         4
+     Nand_gate                       3
+     Nor_gate                        4
+     Xnor                            4
+     inverter                        3
+
+47. Executing CHECK pass (checking for obvious problems).
+Checking module counter4s...
+Found and reported 0 problems.
+
+48. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/tmp/synthesis/post_techmap.dot'.
+Dumping module counter4s to page 1.
+
+49. Executing SHARE pass (SAT-based resource sharing).
+
+50. Executing OPT pass (performing simple optimizations).
+
+50.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+50.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+50.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter4s..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+50.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter4s.
+Performed a total of 0 changes.
+
+50.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4s'.
+Removed a total of 0 cells.
+
+50.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+50.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+50.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4s.
+
+50.9. Finished OPT passes. (There is nothing left to do.)
+
+51. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+52. Printing statistics.
+
+=== counter4s ===
+
+   Number of wires:                  8
+   Number of wire bits:             21
+   Number of public wires:           8
+   Number of public wire bits:      21
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 18
+     D_FF_pe                         4
+     Nand_gate                       3
+     Nor_gate                        4
+     Xnor                            4
+     inverter                        3
+
+mapping tbuf
+
+53. Executing TECHMAP pass (map to technology primitives).
+
+53.1. Executing Verilog-2005 frontend: /home/onur/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/onur/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+53.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+54. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+55. Executing TECHMAP pass (map to technology primitives).
+
+55.1. Executing Verilog-2005 frontend: /home/onur/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/onur/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+55.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+56. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+57. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+57.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\counter4s':
+
+58. Printing statistics.
+
+=== counter4s ===
+
+   Number of wires:                  8
+   Number of wire bits:             21
+   Number of public wires:           8
+   Number of public wire bits:      21
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 18
+     D_FF_pe                         4
+     Nand_gate                       3
+     Nor_gate                        4
+     Xnor                            4
+     inverter                        3
+
+[INFO]: USING STRATEGY AREA 0
+
+59. Executing ABC pass (technology mapping using ABC).
+
+59.1. Extracting gate netlist of module `\counter4s' to `/tmp/yosys-abc-qRCL2A/input.blif'..
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+60. Executing SETUNDEF pass (replace undef values with defined constants).
+
+61. Executing HILOMAP pass (mapping to constant drivers).
+
+62. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+63. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4s..
+
+64. Executing INSBUF pass (insert buffer cells for connected wires).
+
+65. Executing CHECK pass (checking for obvious problems).
+Checking module counter4s...
+Found and reported 0 problems.
+
+66. Printing statistics.
+
+=== counter4s ===
+
+   Number of wires:                 18
+   Number of wire bits:             21
+   Number of public wires:          18
+   Number of public wire bits:      21
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 18
+     D_FF_pe                         4
+     Nand_gate                       3
+     Nor_gate                        4
+     Xnor                            4
+     inverter                        3
+
+   Chip area for module '\counter4s': 196.449600
+
+67. Executing Verilog backend.
+Dumping module `\counter4s'.
+
+End of script. Logfile hash: ad9f9097b7, CPU: user 0.21s system 0.01s, MEM: 28.48 MB peak
+Yosys 0.30+48 (git sha1 14d50a176d5, gcc 8.3.1 -fPIC -Os)
+Time spent: 39% 4x stat (0 sec), 36% 1x dfflibmap (0 sec), ...

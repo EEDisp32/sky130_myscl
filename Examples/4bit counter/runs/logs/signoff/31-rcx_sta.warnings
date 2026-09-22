@@ -1,0 +1,5 @@
+Warning: /openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/results/routing/counter4s.nl.v line 163, module sky130_fd_sc_hd__tapvpwrvgnd_1 not found. Creating black box for TAP_78.
+Warning: /openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/results/routing/counter4s.nl.v line 304, module sky130_ef_sc_hd__decap_12 not found. Creating black box for FILLER_0_0_9.
+Warning: /openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/results/routing/counter4s.nl.v line 306, module sky130_fd_sc_hd__fill_1 not found. Creating black box for FILLER_0_0_27.
+Warning: /openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/results/routing/counter4s.nl.v line 317, module sky130_fd_sc_hd__fill_2 not found. Creating black box for FILLER_0_0_125.
+[WARNING] Did not save OpenROAD database!

@@ -1,0 +1,49 @@
+OpenROAD 41a51eaf4ca2171c92ff38afb91eb37bbd3f36da 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+define_corners Typical
+read_liberty -corner Typical /home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/MySCL_M_tt.lib
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+[INFO ODB-0222] Reading LEF file: /openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/tmp/merged.nom.lef
+[INFO ODB-0223]     Created 14 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 447 library cells
+[INFO ODB-0226] Finished LEF file:  /openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/tmp/merged.nom.lef
+Reading netlist '/openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/results/synthesis/counter4s.v'…
+Reading design constraints file at '/openlane/scripts/base.sdc'…
+[INFO]: Setting output delay to: 2.0
+[INFO]: Setting input delay to: 2.0
+[INFO]: Setting load to: 0.033442
+[INFO]: Setting clock uncertainty to: 0.25
+[INFO]: Setting clock transition to: 0.15
+[INFO]: Setting timing derate to: 5.0 %
+[WARNING IFP-0043] No site found for instance f0 in block counter4s.
+[WARNING IFP-0043] No site found for instance f1 in block counter4s.
+[WARNING IFP-0043] No site found for instance f2 in block counter4s.
+[WARNING IFP-0043] No site found for instance f3 in block counter4s.
+[WARNING IFP-0043] No site found for instance n1 in block counter4s.
+[WARNING IFP-0043] No site found for instance n2 in block counter4s.
+[WARNING IFP-0043] No site found for instance n3 in block counter4s.
+[WARNING IFP-0043] No site found for instance r0 in block counter4s.
+[WARNING IFP-0043] No site found for instance r1 in block counter4s.
+[WARNING IFP-0043] No site found for instance r2 in block counter4s.
+[WARNING IFP-0043] No site found for instance r3 in block counter4s.
+[WARNING IFP-0043] No site found for instance x0 in block counter4s.
+[WARNING IFP-0043] No site found for instance x1 in block counter4s.
+[WARNING IFP-0043] No site found for instance x2 in block counter4s.
+[WARNING IFP-0043] No site found for instance x3 in block counter4s.
+[INFO IFP-0001] Added 39 rows of 193 site unithd with height 1.
+[INFO IFP-0030] Inserted 0 tiecells using sky130_fd_sc_hd__conb_1/LO.
+[INFO IFP-0030] Inserted 0 tiecells using sky130_fd_sc_hd__conb_1/HI.
+[INFO] Extracting DIE_AREA and CORE_AREA from the floorplan
+[INFO] Floorplanned on a die area of 0.0 0.0 100.0 130.0 (microns). Saving to /openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/reports/floorplan/3-initial_fp_die_area.rpt.
+[INFO] Floorplanned on a core area of 5.52 10.88 94.3 116.96 (microns). Saving to /openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/reports/floorplan/3-initial_fp_core_area.rpt.
+Writing OpenROAD database to '/openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/tmp/floorplan/3-initial_fp.odb'…
+Writing layout to '/openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/tmp/floorplan/3-initial_fp.def'…
+Writing timing constraints to '/openlane/designs/4bit/runs/RUN_2026.09.22_13.10.46/tmp/floorplan/3-initial_fp.sdc'…
