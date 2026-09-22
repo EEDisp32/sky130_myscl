@@ -32,7 +32,7 @@ The cell consists of two series pull-up PMOS transistors and two parallel pull-d
 
 ## Layout
 
-![NOR Layout](docs/Nor_layout.png)
+![NOR Layout](docs/Nor.png)
 
 ---
 
