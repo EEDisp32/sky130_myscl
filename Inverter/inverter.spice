@@ -1,0 +1,17 @@
+* NGSPICE file created from inverter.ext - technology: sky130A
+
+.subckt inverter VGND VNB VPB VPWR Y A
+X0 Y A VGND VNB sky130_fd_pr__nfet_01v8 ad=0.162 pd=1.65 as=0.162 ps=1.65 w=0.5 l=0.15
+X1 Y A VPWR VPB sky130_fd_pr__pfet_01v8 ad=0.275 pd=2.34 as=0.275 ps=2.34 w=0.845 l=0.15
+C0 VPWR VPB 0.051f
+C1 VGND VPB 0.00642f
+C2 Y VPWR 0.0824f
+C3 VGND Y 0.0705f
+C4 A VPB 0.0499f
+C5 VGND VPWR 0.0296f
+C6 Y A 0.062f
+C7 Y VPB 0.02f
+C8 A VPWR 0.041f
+C9 VGND A 0.0455f
+.ends
+

@@ -1,0 +1,24 @@
+* Sky130 Inverter Transient Testbench
+
+.lib "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.include inverter.spice
+
+VVDD VPWR 0 1.8V
+VVSS VGND 0 0V
+
+* Syntax: PULSE(V_initial V_peak Delay Rise_time Fall_time Pulse_width Period)
+VA A 0 PULSE(0 1.8 1n 100p 100p 5n 10n)
+
+Xinv VGND VGND VPWR VPWR Y A inverter
+
+Cload Y 0 10f
+
+.control
+tran 10ps 20ns
+
+plot v(A) v(Y)
+
+plot -i(VVDD) 
+.endc
+
+.end

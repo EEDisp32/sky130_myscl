@@ -1,0 +1,33 @@
+* Sky130 Inverter VTC Testbench
+
+.lib "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.include inverter.spice
+
+VVDD VPWR 0 1.8V
+VVSS VGND 0 0V
+
+VA A 0 DC 0V
+
+Xinv VGND VGND VPWR VPWR Y A inverter
+
+Cload Y 0 10f
+
+.dc VA 0 1.8 0.01
+
+.control
+  .dc VA 0 1.8 0.001
+  run
+
+  * 1. VTC Curve
+  plot v(Y) vs v(A) title "Inverter VTC Curve"
+
+  * 2. Voltage Gain Curve
+  let gain = deriv(v(Y))
+  plot gain vs v(A) title "Inverter Voltage Gain (dVout / dVin)"
+
+  * 3. Threshold Voltage Measurement (Vin = Vout point)
+  meas dc V_inv find v(A) when v(A)=v(Y)
+  print V_inv
+.endc
+
+.end
