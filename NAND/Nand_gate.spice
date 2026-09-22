@@ -1,0 +1,31 @@
+* SPICE3 file created from Nand_gate.ext - technology: sky130A
+
+.subckt Nand_gate VGND VNB VPB VPWR A Y B
+X0 Y A VPWR VPB sky130_fd_pr__pfet_01v8 ad=0.14 pd=1.28 as=0.265 ps=2.53 w=1 l=0.15
+X1 Y B a_110_47# VNB sky130_fd_pr__nfet_01v8 ad=0.167 pd=1.79 as=0.0882 ps=0.91 w=0.63 l=0.15
+X2 a_110_47# A VGND VNB sky130_fd_pr__nfet_01v8 ad=0.0882 pd=0.91 as=0.167 ps=1.79 w=0.63 l=0.15
+X3 VPWR B Y VPB sky130_fd_pr__pfet_01v8 ad=0.265 pd=2.53 as=0.14 ps=1.28 w=1 l=0.15
+C0 VGND A 0.0537f
+C1 a_110_47# Y 0.00934f
+C2 VPB B 0.0396f
+C3 Y VPWR 0.213f
+C4 A B 0.0503f
+C5 A VPB 0.0378f
+C6 VGND a_110_47# 0.00276f
+C7 VGND VPWR 0.0315f
+C8 VPWR B 0.0455f
+C9 VPB VPWR 0.0512f
+C10 VGND Y 0.136f
+C11 A VPWR 0.05f
+C12 Y B 0.086f
+C13 VPB Y 0.00627f
+C14 a_110_47# VPWR 2.58e-19
+C15 A Y 0.0457f
+C16 VGND B 0.00977f
+C17 VGND VPB 0.00512f
+C18 Y VNB 0.0549f
+C19 VPWR VNB 0.241f
+C20 B VNB 0.148f
+C21 A VNB 0.146f
+C22 VPB VNB 0.339f
+.ends

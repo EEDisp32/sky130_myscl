@@ -1,0 +1,40 @@
+* Sky130 NAND2 VTC (Voltage Transfer Curve) Testbench
+.lib "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+.include "Nand_gate.spice"
+
+* --- Power Supplies ---
+VVDD VPWR 0 DC 1.8V
+VVSS VGND 0 DC 0V
+VVPB VPB  0 DC 1.8V
+VVNB VNB  0 DC 0V
+
+* --- Input Signals ---
+* Fix input B to logic high (1.8V) so the NAND gate behaves as an inverter when A sweeps
+VB B 0 DC 1.8V
+VA A 0 DC 0V
+
+* --- Circuit Instance ---
+XNAND VGND VNB VPB VPWR A Y B Nand_gate
+
+* --- DC Analysis (VTC Sweep) ---
+* Sweep input A from 0V to 1.8V with 1mV steps
+.dc VA 0 1.8 0.001
+
+* --- Simulation Commands ---
+.control
+  run
+
+  plot v(Y) vs v(A) title "NAND Gate VTC Curve (A Input Sweep, B=1.8V)"
+  
+  * Gain calculation (Gain = d(Vout)/d(Vin))
+  let gain = deriv(v(Y))
+  plot gain vs v(A) title "Voltage Gain (dVout / dVin)"
+  
+  * V_inv (Threshold Voltage: point where Vin = Vout)
+  meas dc V_inv find v(A) when v(A)=v(Y)
+  
+  print V_inv
+.endc
+
+.end

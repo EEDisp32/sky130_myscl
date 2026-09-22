@@ -1,0 +1,32 @@
+* Sky130 NAND2 Transient Testbench
+.lib "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+.include "Nand_gate.spice"
+
+* --- Power Supplies ---
+VVDD VPWR 0 DC 1.8V
+VVSS VGND 0 DC 0V
+VVPB VPB  0 DC 1.8V
+VVNB VNB  0 DC 0V
+
+* --- Input Signals ---
+VB B 0 PULSE(0 1.8 0 100p 100p 10n 20n)
+VA A 0 PULSE(0 1.8 0 100p 100p 5n 10n)
+
+* --- Circuit Instance ---
+XNAND VGND VNB VPB VPWR A Y B Nand_gate
+
+* --- Load Capacitance ---
+Cload Y 0 10f
+
+* --- Simulation Commands ---
+.control
+  tran 10ps 20ns
+
+  plot v(A) v(B)+2 v(Y)+4
+
+  * VDD source current (i(VVDD)) yields the power consumption
+  plot -i(VVDD)  
+.endc
+
+.end
