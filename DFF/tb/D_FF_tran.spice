@@ -1,0 +1,31 @@
+* D-Flip-Flop Transient Simulation
+
+.lib "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.include D_FF_pe.spice 
+
+Vdd VPWR VGND 1.8V
+Vss VGND 0 0V
+
+Vpb VPB VGND 1.8V
+Vnb VNB VGND 0V
+
+* Clock Signal (CLK): 100 MHz (10ns period), 50ps rise/fall time
+Vclk CLK VGND PULSE(0 1.8 0ns 50ps 50ps 4.95ns 10ns)
+
+* Data Signal (D): Custom period to change asynchronously relative to the clock signal
+Vd D VGND PULSE(0 1.8 2ns 50ps 50ps 13ns 27ns)
+
+X1 CLK VNB VPB VPWR VGND D Q QN D_FF_pe 
+
+Cload1 Q VGND 10f
+Cload2 QN VGND 10f
+
+* Simulate for a total of 100 nanoseconds with 10-picosecond steps
+.tran 10ps 100ns
+
+.control
+    run
+   plot D CLK+2.5 Q+5 QN+7.5
+.endc
+
+.end
