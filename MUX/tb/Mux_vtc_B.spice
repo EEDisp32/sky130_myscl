@@ -1,0 +1,36 @@
+* SkyWater 130nm 2:1 MUX VTC For B Testbench
+
+.lib "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.include Mux.spice 
+
+Vdd VPWR 0 1.8V
+Vss VGND 0 0V
+Vpb VPB  0 1.8V
+Vnb VNB  0 0V
+
+* Set the S and B pins to 0V or 1.8V depending on which MUX channel you want to test
+Vs S VPWR 1.8V
+
+Va A 0 0V
+Vb B 0 0V
+
+XMUX VGND VNB VPB VPWR Y A B S Mux
+
+.dc Vb 0 1.8 0.01
+
+.control
+  run
+  
+  * VTC Graph
+  plot v(Y) vs v(B) title "2:1 MUX VTC Curve"
+
+  * Gain calculation and plotting commands
+  let gain = deriv(v(Y))
+  plot gain vs v(B) title "2:1 MUX Voltage Gain"
+
+  * V_inv (Threshold Voltage: point where Vin = Vout)
+  meas dc V_inv find v(B) when v(B)=v(Y)
+  
+  print V_inv
+.endc
+.end
