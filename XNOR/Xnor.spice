@@ -1,0 +1,55 @@
+* NGSPICE file created from Xnor.ext - technology: sky130A
+
+.subckt Xnor VPWR VGND VNB VPB A B Y
+X0 a_109_47# A VGND VNB sky130_fd_pr__special_nfet_01v8 ad=0.0702 pd=0.75 as=0.0936 ps=1.24 w=0.36 l=0.15
+X1 a_187_21# B VGND VNB sky130_fd_pr__special_nfet_01v8 ad=0.156 pd=1.59 as=0.0603 ps=0.695 w=0.36 l=0.15
+X2 a_356_47# B Y VNB sky130_fd_pr__nfet_01v8 ad=0.162 pd=1.35 as=0.139 ps=1.2 w=0.65 l=0.15
+X3 VGND a_109_47# a_356_47# VNB sky130_fd_pr__special_nfet_01v8 ad=0.0603 pd=0.695 as=0.162 ps=1.35 w=0.36 l=0.15
+X4 Y B a_109_47# VPB sky130_fd_pr__pfet_01v8 ad=0.286 pd=1.62 as=0.195 ps=1.39 w=1 l=0.15
+X5 a_372_413# a_187_21# Y VPB sky130_fd_pr__pfet_01v8 ad=0.229 pd=1.75 as=0.286 ps=1.62 w=0.42 l=0.15
+X6 a_187_21# B VPWR VPB sky130_fd_pr__pfet_01v8 ad=0.26 pd=2.52 as=0.19 ps=1.38 w=1 l=0.15
+X7 Y a_187_21# a_109_47# VNB sky130_fd_pr__special_nfet_01v8 ad=0.139 pd=1.2 as=0.0702 ps=0.75 w=0.36 l=0.15
+X8 a_109_47# A VPWR VPB sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.26 ps=2.52 w=1 l=0.15
+X9 VPWR a_109_47# a_372_413# VPB sky130_fd_pr__pfet_01v8 ad=0.19 pd=1.38 as=0.229 ps=1.75 w=1 l=0.15
+C0 VPWR a_372_413# 0.0169f
+C1 a_109_47# A 0.0581f
+C2 Y VPWR 0.0149f
+C3 B A 0.0183f
+C4 a_372_413# a_109_47# 0.00215f
+C5 a_372_413# B 6.88e-19
+C6 VGND A 0.0314f
+C7 VGND a_372_413# 0.0028f
+C8 Y a_109_47# 0.0831f
+C9 Y a_356_47# 7.53e-19
+C10 a_187_21# VPB 0.119f
+C11 Y B 0.0486f
+C12 VPWR a_109_47# 0.1f
+C13 VGND Y 0.0116f
+C14 a_356_47# VPWR 0.00131f
+C15 VPWR B 0.031f
+C16 VGND VPWR 0.074f
+C17 a_356_47# a_109_47# 0.018f
+C18 a_109_47# B 0.203f
+C19 a_356_47# B 9.73e-19
+C20 VGND a_109_47# 0.254f
+C21 VGND a_356_47# 0.0104f
+C22 VGND B 0.0381f
+C23 a_187_21# A 0.024f
+C24 a_372_413# a_187_21# 0.0189f
+C25 Y a_187_21# 0.156f
+C26 VPWR a_187_21# 0.201f
+C27 a_109_47# a_187_21# 0.142f
+C28 a_356_47# a_187_21# 2.63e-19
+C29 a_187_21# B 0.309f
+C30 VGND a_187_21# 0.101f
+C31 VPB A 0.0376f
+C32 Y VPB 0.00523f
+C33 VPWR VPB 0.0831f
+C34 a_109_47# VPB 0.0403f
+C35 VPB B 0.105f
+C36 VGND VPB 0.00786f
+C37 Y A 2.66e-19
+C38 Y a_372_413# 3.55e-19
+C39 VPWR A 0.0261f
+.ends
+

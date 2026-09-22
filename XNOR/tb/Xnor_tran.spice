@@ -1,0 +1,25 @@
+* SkyWater 130nm XNOR Gate Transient Testbench
+
+.lib "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+.include "Xnor.spice" 
+
+Vdd VPWR 0 1.8V
+Vss VGND 0 0V
+
+Vb B 0 PULSE(0 1.8 10n 100p 100p 10n 20n)
+Va A 0 PULSE(0 1.8 20n 100p 100p 20n 40n)
+
+XX1 VPWR VGND VGND VPWR A B Y Xnor
+
+Cload Y 0 10f
+
+.control
+tran 10p 40n
+
+plot v(A) v(B)+2 V(Y)+4
+
+
+plot -i(Vdd)
+.endc
+.end

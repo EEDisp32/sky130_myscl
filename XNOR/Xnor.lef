@@ -1,0 +1,99 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO Xnor
+  CLASS CORE ;
+  FOREIGN Xnor ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 3.680 BY 2.720 ;
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 0.000 2.480 3.680 2.960 ;
+    END
+  END VPWR
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 0.000 -0.240 3.680 0.240 ;
+    END
+  END VGND
+  PIN VNB
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER pwell ;
+        RECT 0.140 0.725 0.310 1.015 ;
+        RECT 1.220 0.730 2.160 1.015 ;
+        RECT 1.220 0.725 3.505 0.730 ;
+        RECT 0.005 0.235 3.505 0.725 ;
+        RECT 0.005 0.230 1.220 0.235 ;
+        RECT 0.140 -0.085 0.310 0.230 ;
+    END
+  END VNB
+  PIN VPB
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER nwell ;
+        RECT -0.190 2.905 3.680 2.910 ;
+        RECT -0.190 1.305 3.870 2.905 ;
+    END
+  END VPB
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.204000 ;
+    PORT
+      LAYER li1 ;
+        RECT 0.095 0.905 0.345 1.275 ;
+    END
+  END A
+  PIN Y
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.850200 ;
+    PORT
+      LAYER li1 ;
+        RECT 1.330 1.465 1.585 1.795 ;
+        RECT 1.390 0.935 1.560 1.465 ;
+        RECT 1.330 0.595 1.695 0.935 ;
+    END
+  END Y
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.451500 ;
+    PORT
+      LAYER li1 ;
+        RECT 1.755 1.235 3.255 1.405 ;
+        RECT 1.755 1.105 2.085 1.235 ;
+        RECT 2.905 0.715 3.255 1.235 ;
+    END
+  END B
+  OBS
+      LAYER li1 ;
+        RECT 0.515 2.270 0.845 2.465 ;
+        RECT 0.515 0.470 0.685 2.270 ;
+        RECT 0.975 1.975 2.025 2.145 ;
+        RECT 0.975 0.705 1.160 1.975 ;
+        RECT 1.775 1.745 2.025 1.975 ;
+        RECT 3.255 1.915 3.595 2.465 ;
+        RECT 3.425 1.745 3.595 1.915 ;
+        RECT 1.775 1.575 3.595 1.745 ;
+        RECT 2.405 0.935 2.735 1.040 ;
+        RECT 1.865 0.765 2.735 0.935 ;
+        RECT 0.515 0.425 0.845 0.470 ;
+        RECT 1.865 0.425 2.035 0.765 ;
+        RECT 3.425 0.515 3.595 1.575 ;
+        RECT 0.515 0.255 2.035 0.425 ;
+        RECT 3.085 0.255 3.595 0.515 ;
+  END
+END Xnor
+END LIBRARY
+
