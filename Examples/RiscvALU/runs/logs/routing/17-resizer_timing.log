@@ -1,0 +1,98 @@
+OpenROAD 41a51eaf4ca2171c92ff38afb91eb37bbd3f36da 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/tmp/15-ALU.odb'…
+define_corners Slowest Typical Fastest
+read_liberty -corner Slowest /home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/MySCL_M_ss.lib
+read_liberty -corner Typical /home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/MySCL_M_tt.lib
+read_liberty -corner Fastest /home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/MySCL_M_ff.lib
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+Reading design constraints file at '/openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/tmp/15-ALU.sdc'…
+[WARNING STA-0357] virtual clock clk can not be propagated.
+[INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met3. 
+[INFO]: Setting signal max routing layer to: met5 and clock max routing layer to met5. 
+-congestion_iterations 50 -verbose -congestion_report_file /openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/tmp/routing/resizer-routing-timing-congestion.rpt
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 11
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal      12480          6509          47.84%
+met2       Vertical         9360          6429          31.31%
+met3       Horizontal       6240          4289          31.27%
+met4       Vertical         3744          2328          37.82%
+met5       Horizontal       1248           552          55.77%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove overflow.
+[INFO GRT-0197] Via related to pin nodes: 7430
+[INFO GRT-0198] Via related Steiner nodes: 167
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 8334
+[INFO GRT-0112] Final usage 3D: 32424
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1              6509          3248           49.90%             0 /  0 /  0
+met2              6429          3256           50.65%             0 /  0 /  0
+met3              4289           480           11.19%             0 /  0 /  0
+met4              2328           438           18.81%             0 /  0 /  0
+met5               552             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total            20107          7422           36.91%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 79294 um
+[INFO GRT-0014] Routed nets: 2372
+[INFO]: Setting RC values...
+[INFO RSZ-0033] No hold violations found.
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL           47014.1 u
+legalized HPWL          47868.9 u
+delta HPWL                    2 %
+
+[INFO DPL-0020] Mirrored 958 instances
+[INFO DPL-0021] HPWL before           47868.9 u
+[INFO DPL-0022] HPWL after            47014.1 u
+[INFO DPL-0023] HPWL delta               -1.8 %
+Setting global connections for newly added cells…
+Writing OpenROAD database to '/openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/tmp/17-ALU.odb'…
+Writing netlist to '/openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/tmp/17-ALU.nl.v'…
+Writing powered netlist to '/openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/tmp/17-ALU.pnl.v'…
+Writing layout to '/openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/tmp/17-ALU.def'…
+Writing timing constraints to '/openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/tmp/17-ALU.sdc'…
+area_report
+
+===========================================================================
+report_design_area
+============================================================================
+Design area 11805 u^2 46% utilization.
+area_report_end

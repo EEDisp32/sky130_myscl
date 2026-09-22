@@ -1,0 +1,18 @@
+{
+    "DESIGN_NAME": "alu32",
+    "VERILOG_FILES": "dir::src/alu32.v",
+    "CLOCK_PORT": "clk",
+    "CLOCK_NET": "clk",
+    "CLOCK_PERIOD": 20,
+    
+    "LIB_SYNTH": "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/MySCL_M_tt.lib",
+    "LIB_TYPICAL": "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/MySCL_M_tt.lib",
+    "LIB_SLOWEST": "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/MySCL_M_ss.lib",
+    "LIB_FASTEST": "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/MySCL_M_ff.lib",
+    "NO_SYNTH_CELL_LIST": "dir::no_synth_custom.cells",
+
+    "FP_SIZING": "relative",
+    "FP_CORE_UTIL": 35,
+    "FP_PDN_ENABLE_GLOBAL_CONNECTIONS": "1",
+    "SYNTH_TIMING_DRIVEN": 1
+}

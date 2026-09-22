@@ -1,0 +1,54 @@
+CVC: Circuit Validation Check  Version 1.1.4
+CVC: Log output to /openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/reports/signoff/ALU.rpt
+CVC: Error output to /openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/reports/signoff/ALU.rpt.error.gz
+CVC: Debug output to /openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/reports/signoff/ALU.rpt.debug.gz
+CVC: Start: Sun Sep 20 19:57:14 2026
+
+Using the following parameters for CVC (Circuit Validation Check) from /home/onur/.ciel/sky130A/libs.tech/openlane/cvc/cvcrc
+CVC_TOP = 'ALU'
+CVC_NETLIST = '/openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/tmp/signoff/ALU.cdl'
+CVC_MODE = 'ALU'
+CVC_MODEL_FILE = '/home/onur/.ciel/sky130A/libs.tech/openlane/cvc/models'
+CVC_POWER_FILE = '/openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/tmp/signoff/ALU.power'
+CVC_FUSE_FILE = ''
+CVC_REPORT_FILE = '/openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/reports/signoff/ALU.rpt'
+CVC_REPORT_TITLE = 'CVC $CVC_TOP'
+CVC_CIRCUIT_ERROR_LIMIT = '100'
+CVC_SEARCH_LIMIT = '100'
+CVC_LEAK_LIMIT = '0.0002'
+CVC_SOI = 'false'
+CVC_SCRC = 'false'
+CVC_VTH_GATES = 'false'
+CVC_MIN_VTH_GATES = 'false'
+CVC_IGNORE_VTH_FLOATING = 'false'
+CVC_IGNORE_NO_LEAK_FLOATING = 'false'
+CVC_LEAK_OVERVOLTAGE = 'true'
+CVC_LOGIC_DIODES = 'false'
+CVC_ANALOG_GATES = 'true'
+CVC_BACKUP_RESULTS = 'false'
+CVC_MOS_DIODE_ERROR_THRESHOLD = '0'
+CVC_SHORT_ERROR_THRESHOLD = '0'
+CVC_BIAS_ERROR_THRESHOLD = '0'
+CVC_FORWARD_ERROR_THRESHOLD = '0'
+CVC_FLOATING_ERROR_THRESHOLD = '0'
+CVC_GATE_ERROR_THRESHOLD = '0'
+CVC_LEAK?_ERROR_THRESHOLD = '0'
+CVC_EXPECTED_ERROR_THRESHOLD = '0'
+CVC_OVERVOLTAGE_ERROR_THRESHOLD = '0'
+CVC_PARALLEL_CIRCUIT_PORT_LIMIT = '0'
+CVC_CELL_ERROR_LIMIT_FILE = ''
+CVC_CELL_CHECKSUM_FILE = ''
+CVC_LARGE_CIRCUIT_SIZE = '10000000'
+CVC_NET_CHECK_FILE = ''
+CVC_MODEL_CHECK_FILE = ''
+End of parameters
+
+CVC: Reading device model settings...
+CVC: Reading power settings...
+CVC: Parsing netlist /openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/tmp/signoff/ALU.cdl
+
+Cdl fixed data size 91672
+Usage CDL: Time: 0  Memory: 9508  I/O: 5312  Swap: 0
+CVC: Counting and linking...
+Fatal error:could not find subcircuit: XFILLER_0_48_15(sky130_ef_sc_hd__decap_12) in ALU
+

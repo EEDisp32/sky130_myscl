@@ -1,0 +1,170 @@
+
+Magic 8.3 revision 413 - Compiled on Wed Jul 12 10:04:40 UTC 2023.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Using technology "sky130A", version 1.0.493-0-g0fe599b
+Reading LEF data from file /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+This action cannot be undone.
+LEF read, Line 82 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 83 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 116 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 118 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 119 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 125 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 126 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 127 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 160 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 171 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 172 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 173 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 213 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 214 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 215 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 255 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 256 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 257 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 294 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 295 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 801 lines.
+Reading DEF data from file /openlane/designs/RiscvALU/runs/RUN_2026.09.20_19.53.10/results/routing/ALU.def.
+This action cannot be undone.
+  Processed 4 vias total.
+Cell sky130_fd_sc_hd__diode_2 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_3 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_8 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__fill_1 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_4 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__fill_2 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_6 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_ef_sc_hd__decap_12 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__tapvpwrvgnd_1 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell Nand_gate read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell inverter read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell Nor_gate read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell Xnor read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_4 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_2 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_4 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell Mux read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__inv_2 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_2 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_1 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlymetal6s2s_1 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_1 read from path /home/onur/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+  Processed 4926 subcell instances total.
+  Processed 103 pins total.
+  Processed 2 special nets total.
+  Processed 2372 nets total.
+DEF read: Processed 38932 lines.
+Moving label "_0028_" from metal1 to viali in cell ALU.
+Moving label "_0089_" from metal1 to viali in cell ALU.
+Moving label "_0092_" from metal2 to via2 in cell ALU.
+Moving label "_0128_" from metal1 to via1 in cell ALU.
+Moving label "_0191_" from metal2 to via2 in cell ALU.
+Moving label "_0199_" from metal1 to viali in cell ALU.
+Moving label "_0200_" from metal1 to viali in cell ALU.
+Moving label "_0202_" from metal3 to via3 in cell ALU.
+Moving label "_0204_" from metal1 to viali in cell ALU.
+Moving label "_0219_" from metal1 to via1 in cell ALU.
+Moving label "_0225_" from metal1 to viali in cell ALU.
+Moving label "_0249_" from metal1 to viali in cell ALU.
+Moving label "_0272_" from metal2 to via1 in cell ALU.
+Moving label "_0300_" from metal2 to via1 in cell ALU.
+Moving label "_0321_" from metal2 to via2 in cell ALU.
+Moving label "_0346_" from metal2 to via1 in cell ALU.
+Moving label "_0363_" from metal2 to via1 in cell ALU.
+Moving label "_0405_" from metal1 to via1 in cell ALU.
+Moving label "_0407_" from metal3 to via3 in cell ALU.
+Moving label "_0425_" from metal1 to viali in cell ALU.
+Moving label "_0444_" from metal1 to viali in cell ALU.
+Moving label "_0491_" from metal1 to viali in cell ALU.
+Moving label "_0499_" from metal2 to via2 in cell ALU.
+Moving label "_0513_" from metal2 to via2 in cell ALU.
+Moving label "_0611_" from metal1 to via1 in cell ALU.
+Moving label "_0664_" from metal1 to viali in cell ALU.
+Moving label "_0686_" from metal1 to via1 in cell ALU.
+Moving label "_0688_" from metal3 to via3 in cell ALU.
+Moving label "_0689_" from metal1 to viali in cell ALU.
+Moving label "_0694_" from metal1 to via1 in cell ALU.
+Moving label "_0760_" from metal2 to via2 in cell ALU.
+Moving label "_0772_" from metal2 to via1 in cell ALU.
+Moving label "_0814_" from metal1 to viali in cell ALU.
+Moving label "_0841_" from metal2 to via1 in cell ALU.
+Moving label "_0910_" from metal1 to viali in cell ALU.
+Moving label "_0949_" from metal2 to via1 in cell ALU.
+Moving label "_1001_" from metal1 to via1 in cell ALU.
+Moving label "_1002_" from metal2 to via1 in cell ALU.
+Moving label "_1147_" from metal1 to via1 in cell ALU.
+Moving label "_1183_" from metal1 to viali in cell ALU.
+Moving label "_1248_" from metal2 to via1 in cell ALU.
+Moving label "_1315_" from metal1 to viali in cell ALU.
+Moving label "_1353_" from metal2 to via1 in cell ALU.
+Moving label "_1478_" from metal1 to via1 in cell ALU.
+Moving label "_1491_" from metal3 to via2 in cell ALU.
+Moving label "_1546_" from metal1 to via1 in cell ALU.
+Moving label "_1584_" from metal1 to viali in cell ALU.
+Moving label "_1592_" from metal2 to via1 in cell ALU.
+Moving label "_1686_" from metal2 to via1 in cell ALU.
+Moving label "_1827_" from metal1 to via1 in cell ALU.
+Moving label "_1875_" from metal1 to viali in cell ALU.
+Moving label "_1889_" from metal2 to via2 in cell ALU.
+Moving label "_1890_" from metal2 to via2 in cell ALU.
+Moving label "_1905_" from metal2 to via1 in cell ALU.
+Moving label "_1912_" from metal1 to viali in cell ALU.
+Moving label "_1947_" from metal1 to viali in cell ALU.
+Moving label "_1963_" from metal1 to via1 in cell ALU.
+Moving label "_2001_" from metal1 to viali in cell ALU.
+Moving label "_2044_" from metal2 to via2 in cell ALU.
+Moving label "_2080_" from metal1 to viali in cell ALU.
+Moving label "_2103_" from metal1 to via1 in cell ALU.
+Moving label "net30" from metal2 to via1 in cell ALU.
+Moving label "net77" from metal3 to via3 in cell ALU.
+Moving label "net79" from metal3 to via3 in cell ALU.
+Moving label "net87" from metal2 to via2 in cell ALU.
+Moving label "result[10]" from metal2 to via2 in cell ALU.
+Moving label "zero" from metal2 to via2 in cell ALU.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  172.450 x 183.170  ( 0.000,  0.000), ( 172.450,  183.170)  31587.666 
+lambda:   17245.00 x 18317.00  (  0.00,  0.00 ), ( 17245.00,  18317.00)  315876672.00
+internal:  34490 x 36634   (     0,  0    ), ( 34490,  36634)  1263506660
+   Generating output for cell sky130_fd_sc_hd__decap_3
+   Generating output for cell sky130_fd_sc_hd__buf_2
+   Generating output for cell sky130_fd_sc_hd__clkbuf_2
+   Generating output for cell sky130_fd_sc_hd__clkbuf_4
+   Generating output for cell sky130_fd_sc_hd__decap_4
+   Generating output for cell sky130_fd_sc_hd__decap_6
+   Generating output for cell sky130_ef_sc_hd__decap_12
+   Generating output for cell sky130_fd_sc_hd__fill_1
+   Generating output for cell sky130_fd_sc_hd__fill_2
+   Generating output for cell sky130_fd_sc_hd__decap_8
+   Generating output for cell sky130_fd_sc_hd__tapvpwrvgnd_1
+   Generating output for cell inverter
+   Generating output for cell sky130_fd_sc_hd__dlymetal6s2s_1
+   Generating output for cell sky130_fd_sc_hd__buf_1
+   Generating output for cell Nand_gate
+   Generating output for cell Nor_gate
+   Generating output for cell Xnor
+   Generating output for cell Mux
+   Generating output for cell sky130_fd_sc_hd__inv_2
+   Generating output for cell sky130_fd_sc_hd__clkbuf_1
+   Generating output for cell sky130_fd_sc_hd__diode_2
+   Generating output for cell sky130_fd_sc_hd__buf_4
+   Generating output for cell ALU
+[INFO]: GDS Write Complete
