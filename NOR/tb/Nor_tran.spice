@@ -1,0 +1,34 @@
+* Sky130 NOR2 Transient Testbench
+.lib "/home/onur/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+.include "Nor_gate.spice"
+
+* --- Power Supplies ---
+VVDD VPWR 0 DC 1.8V
+VVSS VGND 0 DC 0V
+VVPB VPB  0 DC 1.8V
+VVNB VNB  0 DC 0V
+
+* --- Input Signals ---
+Va A 0 pulse(0 1.8 0ns 100ps 100ps 5ns 10ns)
+Vb B 0 pulse(0 1.8 0ns 100ps 100ps 10ns 20ns)
+
+* --- Circuit Instance ---
+XDUT VGND VNB VPB VPWR A B Y Nor_gate
+
+* --- Load Capacitance ---
+Cload Y 0 10f
+
+* --- Transient Analysis ---
+.tran 10p 20n
+
+.control
+  run
+
+  plot v(a) v(b)+2 v(y)+4
+
+  * VDD source current (i(VVDD)) yields the power consumption
+  plot -i(vvdd)
+.endc
+
+.end

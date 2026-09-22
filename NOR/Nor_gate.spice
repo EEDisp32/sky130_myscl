@@ -1,0 +1,27 @@
+* NGSPICE file created from Nor_gate.ext - technology: sky130A
+
+.subckt Nor_gate VGND VNB VPB VPWR A B Y
+X0 a_110_297# A VPWR VPB sky130_fd_pr__pfet_01v8 ad=0.14 pd=1.28 as=0.265 ps=2.53 w=1 l=0.15
+X1 VGND B Y VNB sky130_fd_pr__nfet_01v8 ad=0.167 pd=1.79 as=0.0882 ps=0.91 w=0.63 l=0.15
+X2 Y A VGND VNB sky130_fd_pr__nfet_01v8 ad=0.0882 pd=0.91 as=0.167 ps=1.79 w=0.63 l=0.15
+X3 Y B a_110_297# VPB sky130_fd_pr__pfet_01v8 ad=0.265 pd=2.53 as=0.14 ps=1.28 w=1 l=0.15
+C0 B A 0.0503f
+C1 Y A 0.0452f
+C2 A VPWR 0.0519f
+C3 Y B 0.0865f
+C4 VPB A 0.0378f
+C5 B VPWR 0.00781f
+C6 Y a_110_297# 0.0147f
+C7 VPB B 0.0386f
+C8 Y VPWR 0.159f
+C9 Y VPB 0.0149f
+C10 VGND A 0.0496f
+C11 VPWR a_110_297# 0.00392f
+C12 VPB VPWR 0.0422f
+C13 VGND B 0.0484f
+C14 VGND Y 0.154f
+C15 VGND a_110_297# 4.53e-19
+C16 VGND VPWR 0.0308f
+C17 VGND VPB 0.00474f
+.ends
+

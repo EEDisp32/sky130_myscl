@@ -1,0 +1,76 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO Nor_gate
+  CLASS CORE ;
+  FOREIGN Nor_gate ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 1.380 BY 2.720 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER met1 ;
+        RECT 0.000 -0.240 1.380 0.240 ;
+    END
+  END VGND
+  PIN VNB
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER pwell ;
+        RECT 0.025 0.105 1.375 1.015 ;
+        RECT 0.140 -0.085 0.310 0.105 ;
+    END
+  END VNB
+  PIN VPB
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER nwell ;
+        RECT -0.190 1.305 1.570 2.910 ;
+    END
+  END VPB
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER met1 ;
+        RECT 0.000 2.480 1.380 2.960 ;
+    END
+  END VPWR
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.244500 ;
+    PORT
+      LAYER li1 ;
+        RECT 0.100 1.055 0.435 1.310 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.244500 ;
+    PORT
+      LAYER li1 ;
+        RECT 0.945 1.055 1.290 1.295 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.441400 ;
+    PORT
+      LAYER li1 ;
+        RECT 0.605 1.465 1.285 2.465 ;
+        RECT 0.605 0.875 0.775 1.465 ;
+        RECT 0.525 0.255 0.855 0.875 ;
+    END
+  END Y
+END Nor_gate
+END LIBRARY
+
